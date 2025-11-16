@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación del Proyecto</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            background-image: url('imagenes/fondo_proyecto.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 70, 150, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav button {
+            background-color: #008cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #005f78;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            padding: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        h2,
+        h3 {
+            color: #004696;
+            border-bottom: 2px solid #008cba;
+            padding-bottom: 5px;
+        }
+
+        details {
+            background-color: #e9f5ff;
+            border: 1px solid #cceeff;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #004696;
+            padding: 5px 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-contenido {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .cerrar {
+            color: #aaa;
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .cerrar:hover {
+            color: #f00;
+            cursor: pointer;
+        }
+
+        .boton-manual {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .boton-video {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #dc3545;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header style="display: flex; align-items: center; justify-content: flex-start;">
+        <!-- Div con imagen a la izquierda -->
+        <div style="margin-right: 50px;">
+            <img src="C:\xampp\htdocs\Estadistica\img1.png" alt="Comida" style="width: 100px; height: auto;" />
+        </div>
+        <!-- Título -->
+        <h1>Encuesta de nivel de consumo de alimentos durante el estudio</h1>
+    </header>
+
+    <nav>
+        <button onclick="mostrarSeccion('parcial1')">Parcial 1</button>
+        <button onclick="mostrarSeccion('parcial2')">Parcial 2</button>
+        <button onclick="mostrarSeccion('parcial3')">Parcial 3</button>
+    </nav>
+
+    <main>
+
+        <!-- ================= PARCIAL 1 ====================== -->
+        <section id="parcial1" class="contenido-parcial" style="display:block;">
+            <h2>📝 Contenido del Parcial 1</h2>
+
+            <h3>📑 Informe del Proyecto</h3>
+            <a href="C:\xampp\htdocs\Estadistica\PrimerP\INFORME.pdf" download style="color:#28a745;">INFORME</a>
+
+            <h3>🎥 Video Informativo</h3>
+            <button onclick="abrirModal('video_informativo')" class="boton-video">🎥 Ver Video MAPAS</button>
+
+            <h3>👥 Ejercicios por Integrante:</h3>
+
+            <!-- ================= INTEGRANTE 1 ================= -->
+            <details>
+                <summary>👤Integrante 1: Melany Torres - Ejercicio 9</summary>
+                <p>9. En el último mes, ¿cuántas veces aproximadamente ha ingerido alimentos durante su estudio?</p>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mela\ANALISIS_VARIABLE_PREGUNTA9.pdf" download
+                            style="color:#28a745;">WORD</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mela\Excel-pregunta9.xlsx" download
+                            style="color:#28a745;">EXCEL</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mela\Jamovi-datos pregunta9.omv" download
+                            style="color:#28a745;">JAMOVI</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mela\Melany Torres-Manual de excel.pdf" download
+                            style="color:#28a745;">MANUAL EXCEL</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mela\Melany Torres-Manual de excel.pdf" download
+                            style="color:#28a745;">MANUAL JAMOVI</a></li>
+                </ul>
+                <!-- BOTÓN VIDEO -->
+                <button onclick="abrirModal('video_melany')" class="boton-video">🎥 Ver Video</button>
+            </details>
+
+            <!-- ================= INTEGRANTE 2 ================= -->
+            <details>
+                <summary>👤Integrante 2: Mateo Masaquiza - Ejercicio 10</summary>
+                <p>10. En el último mes, ¿cuánto dinero ha gastado en el consumo de alimentos durante su estudio?</p>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mateo\PREGUNTA10.pdf" download
+                            style="color:#28a745;">WORD</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mateo\Pregunta10.xlsx" download
+                            style="color:#28a745;">EXCEL</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mateo\jamoviP10.omv" download
+                            style="color:#28a745;">JAMOVI</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Mateo\Manual P10.pdf" download
+                            style="color:#28a745;">MANUAL</a></li>
+                </ul>
+                <button onclick="abrirModal('video_mateo')" class="boton-video">🎥 Ver Video</button>
+            </details>
+
+            <!-- ================= INTEGRANTE 3 ================= -->
+            <details>
+                <summary>👤Integrante 3: Robert Cherrez- Ejercicio 13</summary>
+                <p>13. En qué porcentaje aumenta su ánimo al consumir alimentos durante su estudio?</p>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Robert\Pregunta13_Desarrollo de Medidas y Probabilidades.pdf"
+                            download style="color:#28a745;">WORD</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Robert\AlimentosEstadistica.xlsx" download
+                            style="color:#28a745;">EXCEL</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Robert\Consumo de Alimentos.omv" download
+                            style="color:#28a745;">JAMOVI</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Robert\Manual_RobertCherrez.pdf" download
+                            style="color:#28a745;">MANUAL</a></li>
+                </ul>
+                <button onclick="abrirModal('video_robert')" class="boton-video">🎥 Ver Video</button>
+            </details>
+
+            <!-- ================= INTEGRANTE 4 ================= -->
+            <details>
+                <summary>👤Integrante 4: Gael Gonzalez - Ejercicio 14</summary>
+                <p>14. ¿En qué porcentaje considera usted que conoce los beneficios de consumir alimentos durante el
+                    estudio?</p>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Gael\word.pdf" download style="color:#28a745;">WORD</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Gael\excel.xlsx" download style="color:#28a745;">EXCEL</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Gael\Pregunta14.omv" download
+                            style="color:#28a745;">JAMOVI</a></li>
+                </ul>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\Estadistica\Gael\Manual.pdf" download style="color:#28a745;">MANUAL</a>
+                    </li>
+                </ul>
+                <button onclick="abrirModal('video_gael')" class="boton-video">🎥 Ver Video</button>
+            </details>
+
+        </section>
+
+        <!-- ================= PARCIAL 2 ====================== -->
+        <section id="parcial2" class="contenido-parcial" style="display:none;">
+            <h2>📊 Contenido del Parcial 2</h2>
+
+        </section>
+
+        <!-- ================= PARCIAL 3 ====================== -->
+        <section id="parcial3" class="contenido-parcial" style="display:none;">
+            <h2>🚀 Contenido del Parcial 3</h2>
+
+        </section>
+
+    </main>
+
+    <!-- ================= MODALES DE VIDEOS ================= -->
+
+    <!-- INFORME / GENERAL -->
+    <div id="modal_video_informativo" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('video_informativo')">&times;</span>
+            <h4 style="color:#004696;">Video Informativo - MAPAS</h4>
+            <video controls width="100%">
+                <source src="C:/xampp/htdocs/Estadistica/PrimerP/Informativo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- MELANY -->
+    <div id="modal_video_melany" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('video_melany')">&times;</span>
+            <h4 style="color:#004696;">Video - Melany Torres</h4>
+            <video controls width="95%">
+                <source src="C:\xampp\htdocs\Estadistica\Mela\Melany Torres- DISTRIBUCIÓN BINOMIAL.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- MATEO -->
+    <div id="modal_video_mateo" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('video_mateo')">&times;</span>
+            <h4 style="color:#004696;">Video - Mateo</h4>
+            <video controls width="100%">
+                <source src="C:\xampp\htdocs\Estadistica\Mateo\2025-11-14 07-33-17.mkv" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- ROBERT -->
+    <div id="modal_video_robert" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('video_robert')">&times;</span>
+            <h4 style="color:#004696;">Video - Robert</h4>
+            <video controls width="100%">
+                <source src="C:\xampp\htdocs\Estadistica\Robert\Distribucion_Hipergeometrica.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- GAEL -->
+    <div id="modal_video_gael" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('video_gael')">&times;</span>
+            <h4 style="color:#004696;">Video - Gael González</h4>
+            <video controls width="100%">
+                <source src="C:\xampp\htdocs\Estadistica\Gael\desviacion.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        function mostrarSeccion(idSeccion) {
+            document.querySelectorAll('.contenido-parcial').forEach(s => s.style.display = 'none');
+            document.getElementById(idSeccion).style.display = 'block';
+        }
+
+        function abrirModal(idVideo) {
+            document.getElementById('modal_' + idVideo).style.display = 'block';
+        }
+
+        function cerrarModal(idVideo) {
+            document.getElementById('modal_' + idVideo).style.display = 'none';
+            let video = document.querySelector('#modal_' + idVideo + ' video');
+            if (video) video.pause();
+        }
+    </script>
+
+</body>
+
+</html>
